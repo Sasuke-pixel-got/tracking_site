@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+  <div class="admin-container">
+    <h1>Admin Dashboard</h1>
+
+    <div class="form-group">
+      <label>Package ID:</label>
+      <select id="packageId">
+        <option value="PKG12345">PKG12345</option>
+        <option value="PKG93710">PKG93710</option>
+        <option value="PKG38124">PKG38124</option>
+        <option value="PKG10011">PKG10011</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Active:</label>
+      <label class="switch">
+        <input type="checkbox" id="activeToggle">
+        <span class="slider round"></span>
+      </label>
+    </div>
+
+    <div class="form-group">
+      <label>User Name:</label>
+      <input type="text" id="userName">
+    </div>
+
+    <div class="form-group">
+      <label>Package Name:</label>
+      <input type="text" id="packageName">
+    </div>
+
+    <div class="form-group">
+      <label>Upload Package Images (Max 4):</label>
+      <input type="file" id="packageImages" multiple accept="image/*">
+    </div>
+
+    <div class="form-group">
+      <label>Shipment Track Steps:</label>
+      <select id="shipmentSteps" multiple>
+        <option>Confirmed Order</option>
+        <option>Processing Order</option>
+        <option>Quality Check</option>
+        <option>Dispatch Item</option>
+        <option>Product Delivered</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Package Status:</label>
+      <select id="packageStatus">
+        <option value="pending">Pending</option>
+        <option value="in_progress">In Progress</option>
+        <option value="canceled">Canceled</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Expected Date (DD:MM:YYYY):</label>
+      <input type="text" id="expectedDate" placeholder="eg. 01:01:2025">
+    </div>
+
+    <div class="form-group">
+      <label>Home Location (Lat, Long):</label>
+      <input type="text" id="homeLocation" placeholder="Eg. 40.7128, -74.0060">
+    </div>
+
+    <div class="form-group">
+      <label>Current Location (Lat, Long):</label>
+      <input type="text" id="currentLocation" placeholder="Eg. 41.9028, 12.4964">
+    </div>
+
+    <div class="form-group">
+      <label>Destination Location (Lat, Long):</label>
+      <input type="text" id="destinationLocation" placeholder="Eg. 48.8566, 2.3522">
+    </div>
+
+    <div class="form-group">
+      <label>Estimated Delivery Time:</label>
+      <input type="text" id="deliveryTime" placeholder="Eg. 3 Days">
+    </div>
+
+    <div class="form-group">
+      <label>Shipped Via:</label>
+      <select id="shippedVia">
+        <option value="FEDEX">FEDEX</option>
+        <option value="UPS">UPS (United Parcel Service)</option>
+        <option value="XPO Logistics">XPO Logistics</option>
+        <option value="Canada Post">Canada Post</option>
+        <option value="Royal Mail">Royal Mail</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label> help</label>
+      <input type="text" placeholder="email" id="email">
+      <input type="number" placeholder="phone numver" id="number">
+    </div>
+
+    <button id="saveBtn">Save Package</button>
+    <button id="clearBtn">Clear Data</button>
+
+    <br><br>
+    <button onclick="history.back()" class="back-btn">← Back</button>
+  </div>
+
+<script src="admin.js"></script>
+    
+</body>
+</html>

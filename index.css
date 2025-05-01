@@ -1,0 +1,142 @@
+/* index.css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #0b0b14e0;
+  color: #f4ecfb
+}
+
+header {
+  position: relative;
+  text-align: center;
+  padding: 1rem 0;
+}
+header video{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.container {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container input {
+  width: 60%;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 8px;
+}
+.container button{
+  padding: 10px 20px;
+  background-color: #5488af;
+  border: none;
+  border-radius: 8px;
+  color: #2E2E2E;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.container {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 0 15px;
+}
+
+
+/* Blog Section */
+.blog-section {
+  margin-bottom: 40px;
+}
+
+.blog {
+  background: #010001c8;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(67, 60, 60, 0.322);
+  opacity: 0;
+  transform: translateY(100px); /* Start position (south) */
+  transition: all 0.8s ease-in-out;
+}
+
+.blog.visible {
+  opacity: 1;
+  transform: translateY(0); /* End position (north) */
+}
+
+.blog h2 {
+  margin-top: 0;
+  color:rgb(198, 198, 209);;
+}
+
+.blog p {
+  line-height: 1.6;
+}
+
+/* Image Slider */
+.slider {
+  position: relative;
+  max-width: 100%;
+  margin: 10px auto;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slides img {
+  width: 80%;
+  height: 10%;
+  display: block;
+}
+
+.slider-buttons {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+.slider-buttons button {
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.slider-buttons button:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .blog h2 {
+    font-size: 1.2rem;
+  }
+
+  .blog p {
+    font-size: 0.9rem;
+  }
+
+  .slider-buttons button {
+    padding: 8px;
+  }
+}

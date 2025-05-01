@@ -1,0 +1,175 @@
+/* General styles */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #D6CFE1;
+    color: #2E2E2E;
+}
+
+.dashboard {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    background-color: rgb(94, 94, 129);
+    width: 250px;
+    min-width: 200px;
+    padding: 20px;
+    color: rgb(125, 125, 148);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.taplog{
+    width: 50px;
+    height: 50px;
+    border-radius: 20px;
+    align-self: center;
+}
+.sidebar h2 {
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+}
+
+.sidebar li {
+    padding: 10px;
+    cursor: pointer;
+    text-align: center;
+    background-color: #2E2E2E;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s;
+}
+
+.sidebar li:hover,
+.sidebar li.active {
+    background-color: #D6CFE1;
+    color: #2E2E2E;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.section {
+    display: none;
+}
+
+.section.active {
+    display: block;
+}
+
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image-carousel {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin-bottom: 20px;
+}
+
+.image-carousel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    border: 2px solid #2E2E2E;
+}
+
+#prevImage, #nextImage {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #2E2E2E;
+    color: #F2DE9B;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+#prevImage {
+    left: -20px;
+}
+
+#nextImage {
+    right: -20px;
+}
+
+.shipment-progress {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.step .icon {
+    border-radius: 20px;
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.line {
+    width: 3px;
+    height: 40px;
+    background-color: #ccc;
+}
+
+.shipment-details {
+    text-align: center;
+}
+
+#map {
+    height: 400px;
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 10px;
+    border: 2px solid #2E2E2E;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .dashboard {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        flex-direction: row;
+        overflow-x: auto;
+    }
+
+    .sidebar ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .sidebar li {
+        flex: 1;
+        margin: 5px;
+    }
+
+    #prevImage, #nextImage {
+        top: 90%;
+    }
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <link rel="stylesheet" href="user.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</head>
+<body>
+
+<div class="dashboard">
+    <aside class="sidebar">
+        <h2>Menu</h2>
+        <ul>
+            
+            <li id="profileTab" class="active" > <img class="taplog" src="./pov.png"> Profile</li>
+            <li id="trackTab"> <img class="taplog" src="./truc.png"> Shipment Track</li>
+            <li id="mapTab"><img class="taplog" src="./map.png"> Map</li>
+            <li id="billingTab"><img class="taplog"src="./pay.png"> Payments</li>
+            <li id="helpTab"><img class="taplog"src="./help.jpg"> Help</li>
+        </ul>
+    </aside>
+
+    <main class="content">
+        <section id="profileSection" class="section">
+            <h2>Profile</h2>
+            <div class="profile-container">
+                <div class="image-carousel">
+                    <img id="profileImage" src="" alt="Package Image">
+                    <button id="prevImage">⟵</button>
+                    <button id="nextImage">⟶</button>
+                </div>
+                <p><strong>User Name:</strong> <span id="userName"></span></p>
+                <p><strong>Package ID:</strong> <span id="packageId"></span></p>
+                <p><strong>Package Name:</strong> <span id="packageName"></span></p>
+            </div>
+        </section>
+
+        <section id="trackSection" class="section hidden">
+            <h2>Shipment Track</h2>
+            <div class="shipment-details">
+                <p><strong>Status:</strong> <span id="shipmentStatus"></span></p>
+                <p><strong>Expected Date:</strong> <span id="expectedDate"></span></p>
+                <p><strong>Shipped Via:</strong> <span id="shippedVia"></span></p>
+            </div>
+            <div class="shipment-progress">
+                <div class="step" id="step1">
+                    <div class="icon"><img src="./don.png" width="50px"></div>
+                    <p>Confirmed</p>
+                </div>
+                <div class="line" id="line1"></div>
+                <div class="step" id="step2">
+                    <div class="icon"><img src="./pos.png" width="50px"> </div>
+                    <p>Processing</p>
+                </div>
+                <div class="line" id="line2"></div>
+                <div class="step" id="step3">
+                    <div class="icon"><img src="./quol.png" width="50px"></div>
+                    <p>Quality Check</p>
+                </div>
+                <div class="line" id="line3"></div>
+                <div class="step" id="step4">
+                    <div class="icon"><img src="./dis.png" width="50px"></div>
+                    <p>Dispatch</p>
+                </div>
+                <div class="line" id="line4"></div>
+                <div class="step" id="step5">
+                    <div class="icon"><img src="./diliv.png" width="50px"></div>
+                    <p>Delivered</p>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="mapSection" class="section hidden">
+            <h2>Map</h2>
+            <div id="map"></div>
+        </section>
+        <section id="billingSection" class="section hidden">
+            <h2>Payments</h2>
+            <p><strong>Confirmed Order:</strong> Paid ✅</p>
+            <p><strong>Processing Order:</strong> Paid ✅</p>
+        </section> 
+        <section id="helpSection" class="section hidden">
+            <h2>Help</h2>
+            <p>For help or more information, contact our support team </p>
+            <dev>
+            <p><strong>email:</strong> <span id="email"></span></p>
+            <p><strong>email:</strong> <span id="number"></span></p>
+            </dev>
+        </section>
+    </main>
+</div>
+
+<script src="user.js"></script>
+</body>
+</html>
